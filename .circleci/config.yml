@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run:
           name: Hello World
-          command: echo "hello world"
+          command: echo "hello world 2"
 workflows:
   build-and-test:
     jobs:
