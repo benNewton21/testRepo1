@@ -1,0 +1,20 @@
+# This config was automatically generated from your source code
+# Stacks detected: deps:node:.,test:jest:
+version: 2.1
+orbs:
+  node: circleci/node@5
+jobs:
+  test-node:
+    # Install node dependencies and run tests
+    executor: node/default
+    environment:
+      JEST_JUNIT_OUTPUT_DIR: ./test-results/
+    steps:
+      - checkout
+      - run:
+          name: Hello World
+          command: echo "hello world"
+workflows:
+  build-and-test:
+    jobs:
+      - test-node
